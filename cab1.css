@@ -1,0 +1,67 @@
+h1{
+  color:white;; 
+}
+
+h2{
+  color:white;
+}
+
+h3{
+  color:yellow;
+}
+
+
+.total{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.cars{
+   background-color:white;
+   width:15vw;
+   height:100vh;
+}
+
+img{
+  width:15vw;
+  height:50vh;
+}
+.content{
+    color:white;
+    width:70vw;
+    height:100vh;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background-color: black;
+    font-size:large;
+}
+
+.carss{
+    background-color: white;
+    width:15vw;
+    height:100vh;
+}
+
+.sign{
+  height:40px;
+  width:90px;
+  font-size: x-large;
+  align-items:center;
+  color:white;
+  background-color: rgba(0, 140, 255, 0.735);
+}
+
+.log{
+  height:40px;
+  width:80px;
+  font-size: x-large;
+  align-items:center;
+  color:white;
+  background-color: rgba(0, 119, 255, 0.737);
+}
+

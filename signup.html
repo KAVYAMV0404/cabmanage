@@ -1,0 +1,141 @@
+<html>
+<title>signup page</title>
+<h1>SignUp</h1>
+<link href="signup.css" rel="stylesheet" />
+
+<body back-ground="download.jpeg">
+    <center>
+        <div class="s1">
+            <table cellspacing="3" cellpadding="2">
+                <tr>
+                    <td>
+                        <label for="title">title</label>
+                    </td>
+                    <td>
+                        <select id="title" name="title">
+                            <option value="1" selected>Mr</option>
+                            <option value="2" selected>Mrs</option>
+                            <option value="3" selected>Ms</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="firstName">First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" name="firstName" placeholder="your firstname" />
+                    </td>
+                </tr>
+                </br>
+                <tr>
+                    <td>
+                        <label for="lastName">Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="lastName" name="lastName" placeholder="your last name" />
+                    </td>
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="1">male</input>
+                        <input type="radio" id="female" name="gender" value="2">female</input>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Address:</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address" placeholder="your full address" rows="6"
+                            cols="20"></textarea>
+                    </td>
+                </tr>
+                
+
+                <tr>
+                    <td>
+                        <label for="email">Emailid:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="your emailid" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNo">PhoneNo:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="phoneNo" name="phoneNo" placeholder="your phoneno" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="contact">Can we contact you?</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="yes" name="contact" value="1">yes</input>
+                        <input type="radio" id="no" name="contact" value="2">no</input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="communication">Communication Preferrence</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="email" name="communication" value="1">email</input>
+                        <input type="checkbox" id="SMS" name="communication" value="2">SMS</input>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passport">upload id</label>
+                    </td>
+                    <td>
+                        <input type="file" name="fileuplad" accept="image/*" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="createpassword">create password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="min 8 characters" />
+                    </td>
+                </tr>
+                
+                <tr>
+
+                    <td>
+                        <input type="checkbox" id="agree" name="agree"></input>
+                    </td>
+                    <td>
+                        <label for="agree">I agree to these <a href="">terms and conditions</a>of the website</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="button" onclick="" id="submit" name="submit"
+                            value="submit" />
+                    </td>
+
+                    <td>
+                        <input type="reset" id="reset" name="reset" value="reset" />
+                    </td>
+                </tr>
+                
+
+
+            </table>
+        </div>
+    </center>
+
+</body>
+
+</html>
