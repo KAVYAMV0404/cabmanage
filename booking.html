@@ -1,0 +1,112 @@
+<html>
+<title>
+    bookingpage
+</title>
+<link rel="stylesheet" href="login.css" />
+
+<body >
+
+    <div class="main">
+    <div class="content">
+    <h1>Book Cab</h1>
+
+    <form class="login-form" id="loginform" action="ex.html">
+        <table cellspacing="10">
+            <tr>
+                <td>
+                    <label>name</label>
+                </td>
+                <td>
+                    <input type="text" name="customername" class="form-control"  
+                        maxlength="50" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>permanent location</label>
+                </td>
+                <td>
+                    <input type="text" name="p_location" class="form-control"  >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Ride from</label>
+                </td>
+                <td>
+                    <input type="text" name="from_location" class="form-control"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Ride to</label>
+                </td>
+                <td>
+                    <input type="text" name="to_location" class="form-control"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>date</label>
+                </td>
+                <td>
+                    <input type="date" name="date" class="form-control"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>time</label>
+                </td>
+                <td>
+                    <input type="time" name="time" class="form-control"  required>
+                        <select name="" id="">
+                            <option value="1">
+                                AM
+                            </option>
+                            <option value="2">
+                                PM
+                            </option>
+                        </select>
+                </td>
+
+            </tr>
+        </table>
+        <div class="bt" >
+            
+            <input type="submit" class="btn-login" id="btn-sub" value="book now">
+        </div>
+
+
+    </form>
+</div>
+<div class="animation">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_toeknp4d.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+</div>
+</div>
+    <script>
+
+        var name = document.forms['loginform']['customername'];
+        var permanent_location= document.forms['loginform']['p_location'];
+        var ridefrom = document.document.forms['loginform']['from_location'];
+        var rideto = document.document.forms['loginform']['to_location'];
+        var date = document.document.forms['loginform']['date'];
+        var time = document.document.forms['loginform']['time'];
+        var btnsub = document.getElementById('btn-sub');
+        /*function val(e){
+            e.preventDefault();
+            
+        }*/
+        document.querySelectorAll('#loginform input').forEach(e => {
+            e.addEventListener('keyup', function (event) {
+                if (!name.validity.valid || !ridefrom.validity.valid || !rideto.validity.valid || !date.validity.valid || !time.validity.valid)  {
+                    btnsub.setAttribute('disabled', true);
+
+
+                }
+                else {
+                    btnsub.removeAttribute('disabled');
+                }
+            })
+
+        });

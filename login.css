@@ -1,0 +1,57 @@
+body{
+   
+   
+    overflow: hidden;
+    
+}
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation{
+   
+}
+h1{
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color:orange;
+    text-align: center;
+}
+
+.btn-login{
+    width:10vw;
+    height:5vh;
+    background-color:orange;
+    color:white;
+    border:none;
+}
+input{
+    width:20vw;
+    height:5vh;
+    
+
+}
+
+a{
+    color:blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    
+}
+
+table{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+    
+

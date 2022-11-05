@@ -1,0 +1,116 @@
+<html>
+<title>
+    loginpage
+</title>
+<link rel="stylesheet" href="login.css" />
+
+<body >
+
+    <div class="main">
+    <div class="content">
+    <h1>LogIn</h1>
+
+
+    
+    <form class="login-form" id="loginform" action="ex.html">
+        <table cellspacing="10">
+            <tr>
+                <td>
+                    <label>EmailId:</label>
+                </td>
+                <td>
+                    <input type="email" name="email" class="form-control" placeholder="me@example.com" minlength="5"
+                        maxlength="50" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password:</label>
+                </td>
+                <td>
+                    <input type="password" name="password" class="form-control" minlength="8" maxlength="25" required>
+                </td>
+            </tr>
+        </table>
+        <div class="bt" >
+            <a>forgot password?</a>
+            <input type="submit" class="btn-login" id="btn-sub" value="login">
+        </div>
+        
+
+
+    </form>
+</div>
+<div class="animation">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_hsabbeks.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px; margin-top:-50px;"  loop  autoplay></lottie-player>
+</div>
+</div>
+    <script>
+
+        var email = document.forms['loginform']['email'];
+        var password = document.forms['loginform']['password'];
+        var btnsub = document.getElementById('btn-sub');
+
+        console.log(email)
+        /*function val(e){
+            e.preventDefault();
+            
+        }*/
+        document.querySelectorAll('#loginform input').forEach(e => {
+            e.addEventListener('keyup', function (event) {
+                if (!email.validity.valid || !password.validity.valid) {
+                    btnsub.setAttribute('disabled', true);
+
+
+                }
+                else {
+                    btnsub.removeAttribute('disabled');
+                }
+            })
+
+        });
+
+        /*var email = document.forms['loginform']['email'];
+        var password = document.forms['loginform']['password'];
+        var confirmpassword = document.forms['loginform']['confirmpassword'];
+        var btn = document.getElementById('btn-login');
+
+        function validate(e) {
+            e.preventDefault();
+        }
+
+        document.querySelectorAll('#loginform input').forEach(e=>{
+            e.addEventListener('keyup', function(event){
+                if(!email.validity.valid || !password.validity.valid){
+                    bt.setAttribute('disabled', true);
+                }
+                else{
+                    bt.removeAttribute('disabled');
+                }
+            })
+        });
+        
+        document.querySelectorAll('#loginform input').forEach(e=>{
+            e.addEventListener('keyup', function(event){
+                var isValid = true;
+                if(password.value != confirmpassword.value){
+                   isValid = false;
+                  // console.log("invalid password")
+                }
+                if(!isValid){
+                    
+                }
+                else{
+                    btn.removeAttribute('disabled');
+                }
+            })
+        }); */
+
+
+
+
+    </script>
+</body>
+
+</html>

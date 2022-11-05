@@ -1,0 +1,132 @@
+<html>
+<title>signup page</title>
+<h1>SignUp</h1>
+<link href="signup.css" rel="stylesheet" />
+
+<body >
+    <div class="s">
+        <div class="s1">
+            <table cellspacing="3" cellpadding="2">
+
+                <tr>
+                    <td>
+                        <label for="firstName">NAME</label>
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" name="firstName" placeholder="your firstname" />
+                    </td>
+                </tr>
+                </br>
+                
+                <tr>
+                    <td>
+                        <label for="address">ADDRESS</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address" placeholder="your full address" rows="6"
+                            cols="20"></textarea>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="email">EMAIL</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="your emailid" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phoneNo">PHONE NUMBER</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="phoneNo" name="phoneNo" placeholder="your phoneno" required />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="createpassword">CREATE PASSWORD</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="min 8 characters" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="createpassword">CONFIRM PASSWORD</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="min 8 characters" required />
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <input type="checkbox" id="agree" name="agree"></input>
+                    </td>
+                    <td>
+                        <label for="agree">I agree to these <a href="">terms and conditions</a>of the website</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" onclick="" id="submit" name="submit" value="submit" />
+                    </td>
+        
+                    <td>
+                        <input type="reset" id="reset" name="reset" value="reset" />
+                    </td>
+                </tr>
+                
+
+
+
+            </table>
+            
+        </div>
+        
+    </div>
+
+
+</body>
+<script>
+    function validate(e) {
+        e.preventDefault();
+        var password = document.getElementById('myInput2').value;
+        var cpassword = document.getElementById('myInput3').value;
+        //alert(txt);
+        var email = document.regform.email.value;
+        var atposition = email.indexOf("@");
+        var dotposition = email.lastIndexOf(".");
+        if (atposition < 1 || dotposition + 2 >= email.length) {
+            alert("Please enter a valid e-mail address");
+            return false;
+        }
+        var nameRegex = /^[a-zA-Z\-.]+$/;
+        var validUsername = document.regform.uname.value.match(nameRegex);
+        if (validUsername == null) {
+            alert("Your username is not valid. Only characters A-Z, a-z and '-' are  acceptable.");
+            document.regform.uname.focus();
+            return false
+        }
+        if (password.length <= 8) {
+
+            document.getElementById('err-name').innerText = "Password requires atleast 8 characters";
+        }
+
+        if (password != cpassword) {
+
+            document.getElementById('err-name').innerText = "Password and Confirm password doesn't match";
+        }
+        else {
+            window.location.assign("login.html")
+        }
+    }
+
+</script>
+
+</html>//
